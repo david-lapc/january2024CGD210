@@ -1,0 +1,46 @@
+header div.hamburger {
+  overflow: hidden;
+  width: 50px;
+  padding: 5px 0;
+}
+header div.hamburger span {
+  height: 5px;
+  width: 50px;
+  display: block;
+  margin-bottom: 10px;
+  background-color: #000;
+  position: relative;
+  top: 0;
+  left: 0;
+  transition: top 0.2s 0.2s linear, transform 0.2s 0s linear, left 0s 0.2s;
+}
+header div.hamburger span:last-child {
+  margin-bottom: 0;
+}
+header .checkbox {
+  display: none;
+}
+header .checkbox:checked ~ nav {
+  position: relative;
+  left: 0;
+}
+header .checkbox:checked ~ label .hamburger span {
+  transition: top 0.2s 0s linear, transform 0.2s 0.2s linear, left 0s 0.2s;
+}
+header .checkbox:checked ~ label .hamburger span:nth-child(1) {
+  top: 15px;
+  transform: rotateZ(45deg);
+}
+header .checkbox:checked ~ label .hamburger span:nth-child(2) {
+  left: 100%;
+}
+header .checkbox:checked ~ label .hamburger span:nth-child(3) {
+  top: -15px;
+  transform: rotateZ(-45deg);
+}
+header nav {
+  position: relative;
+  left: -200px;
+  transition: all 1s ease;
+  width: 200px;
+}/*# sourceMappingURL=styles.css.map */
