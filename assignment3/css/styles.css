@@ -25,11 +25,16 @@ main {
 .view-container .screen h2 {
   margin: 20px;
 }
-.view-container .screen button {
+.view-container .screen .button {
   font-size: 3rem;
   padding: 8px 30px;
   border: none;
   margin: 20px;
+  background-color: #eddea4;
+  display: inline-block;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .view-container .screen .content {
   background-color: #00a7e1;
@@ -38,6 +43,8 @@ main {
 .view-container .screen-1 {
   text-align: center;
   background-color: #d9e5d6;
+  position: absolute;
+  width: 100%;
 }
 .view-container .screen-1 h1 {
   font-size: 4rem;
@@ -57,4 +64,6 @@ main {
 }
 .view-container .screen-2 {
   background-color: #eddea4;
+  position: absolute;
+  left: -3000px;
 }/*# sourceMappingURL=styles.css.map */

@@ -28,11 +28,14 @@ main {
     h2 {
       margin: 20px;
     }
-    button {
+    .button {
       font-size: 3rem;
       padding: 8px 30px;
       border: none;
       margin: 20px;
+      background-color: #eddea4;
+      display: inline-block;
+      user-select: none;
     }
     .content {
       background-color: #00a7e1;
@@ -42,6 +45,8 @@ main {
   .screen-1 {
     text-align: center;
     background-color: $honeydew;
+    position: absolute;
+    width: 100%;
     h1 {
       font-size: 4rem;
     }
@@ -61,5 +66,7 @@ main {
   }
   .screen-2 {
     background-color: $vanilla;
+    position: absolute;
+    left: -3000px;
   }
 }
