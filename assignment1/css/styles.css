@@ -24,14 +24,23 @@ body header .neon {
     font-size: 0.2em;
   }
 }
+body header .hamburger {
+  position: relative;
+  z-index: 1001;
+}
 body header .hamburger span {
   height: 3px;
   width: 50px;
   margin-bottom: 8px;
   background-color: #fff;
   display: block;
-  z-index: 1001;
   position: relative;
+}
+body header #checkbox {
+  display: none;
+}
+body header #checkbox:checked ~ nav {
+  left: 0;
 }
 body header nav {
   background-color: #7a2000;
@@ -39,10 +48,14 @@ body header nav {
   position: fixed;
   width: 350px;
   top: 0;
-  left: 0;
+  left: -100%;
   z-index: 1000;
   padding-top: 70px;
   font-size: 2em;
+  transition: all 0.5s ease;
+}
+body header nav ul {
+  list-style-type: none;
 }
 body header nav ul li a {
   color: #fff;

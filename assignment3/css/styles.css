@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 20px;
+}
+
+main {
+  background-color: #f7a072;
+}
+
+.view-container {
+  min-height: 100vh;
+}
+.view-container .screen {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.view-container .screen h1,
+.view-container .screen h2 {
+  margin: 20px;
+}
+.view-container .screen button {
+  font-size: 3rem;
+  padding: 8px 30px;
+  border: none;
+  margin: 20px;
+}
+.view-container .screen .content {
+  background-color: #00a7e1;
+  padding: 40px;
+}
+.view-container .screen-1 {
+  text-align: center;
+  background-color: #d9e5d6;
+}
+.view-container .screen-1 h1 {
+  font-size: 4rem;
+}
+.view-container .screen-1 h2 {
+  font-size: 2.5rem;
+}
+.view-container .screen-1 h2 span {
+  display: inline-block;
+}
+.view-container .screen-1 ul {
+  font-size: 2rem;
+  width: 500px;
+  margin: auto;
+  list-style-type: none;
+  text-align: left;
+}
+.view-container .screen-2 {
+  background-color: #eddea4;
+}/*# sourceMappingURL=styles.css.map */
