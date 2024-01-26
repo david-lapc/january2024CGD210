@@ -10,13 +10,36 @@
     <header></header>
     <main>
       <div class="view-container">
+        <div class="screen-selectors">
+          <label tabindex="1" for="screen-1-checkbox"> <h3>Screen1</h3></label>
+          <label tabindex="2" for="screen-2-checkbox"> <h3>Screen2</h3></label>
+          <label tabindex="3" for="screen-3-checkbox"> <h3>Screen3</h3></label>
+        </div>
+        <input
+          class="screen-radio-button"
+          type="radio"
+          name="current-screen"
+          id="screen-1-checkbox"
+        />
+        <input
+          class="screen-radio-button"
+          type="radio"
+          name="current-screen"
+          id="screen-2-checkbox"
+        />
+        <input
+          class="screen-radio-button"
+          type="radio"
+          name="current-screen"
+          id="screen-3-checkbox"
+        />
         <div class="screen screen-1">
           <div class="content">
             <h1>It's your lucky day!</h1>
-            <h2>
+            <p>
               <span>We're giving away free prizes</span>
               <span>to lucky contestants.</span>
-            </h2>
+            </p>
             <h2>How it works</h2>
             <div class="how-it-works">
               <ul>
@@ -25,7 +48,6 @@
                 <li>Claim your prize!</li>
               </ul>
             </div>
-            <input type="checkbox" id="screen-2-checkbox" />
             <label for="screen-2-checkbox">
               <div class="button">Continue</div>
             </label>
@@ -33,15 +55,53 @@
         </div>
         <div class="screen screen-2">
           <div class="content">
-            <h1>Which of the following is your favorite place to shop?</h1>
+            <h1>
+              Which of the following is your
+              <span style="display: inline-block">favorite place to shop?</span>
+            </h1>
             <h2>We'll taylor your prizes to your choice.</h2>
             <ul>
-              <li>Amazon</li>
-              <li>Ebay</li>
-              <li>Target</li>
-              <li>Walmart</li>
-              <li>BestBuy</li>
+              <li>
+                <input type="radio" name="favorite-store" id="amazon" /><label
+                  for="amazon"
+                  >Amazon</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="favorite-store" id="walmart" /><label
+                  for="walmart"
+                  >Walmart</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="favorite-store" id="bestbuy" /><label
+                  for="bestbuy"
+                  >Bestbuy</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="favorite-store" id="target" /><label
+                  for="target"
+                  >Target</label
+                >
+              </li>
+              <li>
+                <input type="radio" name="favorite-store" id="ebay" /><label
+                  for="ebay"
+                  >Ebay</label
+                >
+              </li>
             </ul>
+            <label for="screen-3-checkbox">
+              <div class="button">Continue</div>
+            </label>
+          </div>
+        </div>
+        <div class="screen screen-3">
+          <div class="content">
+            <h1>Do you prefer shopping online or in person?</h1>
+            <input type="radio" name="shopping-preference" />
+            <input type="radio" name="shopping-preference" />
           </div>
         </div>
       </div>

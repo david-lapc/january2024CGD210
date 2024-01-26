@@ -1,11 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Single+Day&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+div.screen-selectors {
+  position: fixed;
+  left: 50%;
+  bottom: 50px;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+}
+div.screen-selectors label {
+  padding: 20px;
+  cursor: pointer;
+}
+div.screen-selectors label:focus {
+  color: #00a7e1;
+}
+
+input.screen-radio-button {
+  display: none;
+}
+
 body {
   font-size: 20px;
+  font-family: "Single Day", cursive;
 }
 
 main {
@@ -20,6 +42,8 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.5s;
+  text-align: center;
 }
 .view-container .screen h1,
 .view-container .screen h2 {
@@ -30,20 +54,41 @@ main {
   padding: 8px 30px;
   border: none;
   margin: 20px;
-  background-color: #eddea4;
+  background-color: #30362f;
+  color: #fff;
   display: inline-block;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  cursor: pointer;
+}
+.view-container .screen .button:hover {
+  background-color: black;
+}
+.view-container .screen ul {
+  text-align: left;
 }
 .view-container .screen .content {
   background-color: #00a7e1;
+  color: #fff;
   padding: 40px;
+}
+.view-container #screen-2-checkbox:checked,
+.view-container #screen-3-checkbox:checked ~ .screen-1 {
+  left: -3000px;
+}
+.view-container #screen-2-checkbox:checked ~ .screen-2 {
+  left: 0;
+}
+.view-container #screen-3-checkbox:checked ~ .screen-3 {
+  left: 0;
 }
 .view-container .screen-1 {
   text-align: center;
   background-color: #d9e5d6;
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
 }
 .view-container .screen-1 h1 {
@@ -57,13 +102,40 @@ main {
 }
 .view-container .screen-1 ul {
   font-size: 2rem;
-  width: 500px;
+  max-width: 500px;
   margin: auto;
   list-style-type: none;
   text-align: left;
+  border: 2px solid;
+  border-radius: 10px;
+  padding: 15px;
 }
 .view-container .screen-2 {
   background-color: #eddea4;
   position: absolute;
+  top: 0;
   left: -3000px;
+  width: 100%;
+}
+.view-container .screen-2 ul {
+  list-style-type: none;
+  max-width: 200px;
+  margin: auto;
+  font-size: 2em;
+}
+.view-container .screen-2 ul label {
+  padding: 20px;
+}
+.view-container .screen-2 ul input {
+  border: 0px;
+  width: 100%;
+  max-width: 20px;
+  height: 2em;
+}
+.view-container .screen-3 {
+  background-color: #eddea4;
+  position: absolute;
+  top: 0;
+  left: -3000px;
+  width: 100%;
 }/*# sourceMappingURL=styles.css.map */

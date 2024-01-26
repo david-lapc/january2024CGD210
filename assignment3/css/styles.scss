@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
 $honeydew: #d9e5d6;
 $blue: #00a7e1;
 $vanilla: #eddea4;
@@ -10,8 +12,29 @@ $black: #30362f;
   box-sizing: border-box;
 }
 
+div.screen-selectors {
+  position: fixed;
+  left: 50%;
+  bottom: 50px;
+  transform: translateX(-50%);
+  z-index: 100;
+  display: flex;
+  label {
+    padding: 20px;
+    cursor: pointer;
+    &:focus {
+      color: $blue;
+    }
+  }
+}
+
+input.screen-radio-button {
+  display: none;
+}
+
 body {
   font-size: 20px;
+  font-family: 'Single Day', cursive;
 }
 
 main {
@@ -24,6 +47,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.5s;
+    text-align: center;
     h1,
     h2 {
       margin: 20px;
@@ -33,19 +58,40 @@ main {
       padding: 8px 30px;
       border: none;
       margin: 20px;
-      background-color: #eddea4;
+      background-color: $black;
+      color: #fff;
       display: inline-block;
       user-select: none;
+      cursor: pointer;
+      &:hover {
+        background-color: darken($black, 20);
+      }
+    }
+    ul {
+      text-align: left;
     }
     .content {
-      background-color: #00a7e1;
+      background-color: $blue;
+      color: #fff;
       padding: 40px;
     }
+  }
+  #screen-2-checkbox:checked,
+  #screen-3-checkbox:checked ~ .screen-1 {
+    left: -3000px;
+  }
+  #screen-2-checkbox:checked ~ .screen-2 {
+    left: 0;
+  }
+  #screen-3-checkbox:checked ~ .screen-3 {
+    left: 0;
   }
   .screen-1 {
     text-align: center;
     background-color: $honeydew;
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     h1 {
       font-size: 4rem;
@@ -58,15 +104,42 @@ main {
     }
     ul {
       font-size: 2rem;
-      width: 500px;
+      max-width: 500px;
       margin: auto;
       list-style-type: none;
       text-align: left;
+      border: 2px solid;
+      border-radius: 10px;
+      padding: 15px;
     }
   }
   .screen-2 {
     background-color: $vanilla;
     position: absolute;
+    top: 0;
     left: -3000px;
+    width: 100%;
+    ul {
+      list-style-type: none;
+      max-width: 200px;
+      margin: auto;
+      font-size: 2em;
+      label {
+        padding: 20px;
+      }
+      input {
+        border: 0px;
+        width: 100%;
+        max-width: 20px;
+        height: 2em;
+      }
+    }
+  }
+  .screen-3 {
+    background-color: $vanilla;
+    position: absolute;
+    top: 0;
+    left: -3000px;
+    width: 100%;
   }
 }
